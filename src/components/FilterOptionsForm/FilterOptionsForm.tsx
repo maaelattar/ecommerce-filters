@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Option } from "../../data-model";
+import "./FilterOptionsForm.scss";
 
 type Props = {
   title: string;
@@ -21,9 +22,9 @@ function FilterOptionsForm({
 
   return (
     <form>
-      <div>
+      <div className="options-container">
         {options.map((option) => (
-          <div key={option.id}>
+          <div key={option.id} className="option">
             <input
               id={option.id}
               defaultChecked={
@@ -47,7 +48,7 @@ function FilterOptionsForm({
           </div>
         ))}
       </div>
-      <div>
+      <div className="actions-container">
         {checkedOptions.length > 0 && (
           <Button
             variant="outline-danger"
@@ -63,6 +64,7 @@ function FilterOptionsForm({
         )}
         <Button
           variant="primary"
+          className="apply-btn"
           type="button"
           onClick={() => {
             onApply({ checkedOptions, title });

@@ -1,0 +1,16 @@
+
+@import '/src/styles/colors';
+@import '/src/styles/mixins';
+
+
+
+ button.filter {
+  @include filter-name(140px, 45px)
+  }
+
+
+ button.filter:hover,   button.filter.active{
+@include filter-name-active()
+}
+
+  

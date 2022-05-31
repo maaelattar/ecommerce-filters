@@ -1,5 +1,7 @@
 import React from "react";
+import clsx from "clsx";
 import { OverlayTrigger, Popover } from "react-bootstrap";
+import "./CustomOverlayTrigger.scss";
 
 type Props = {
   title: string;
@@ -27,7 +29,14 @@ function CustomOverlayTrigger({
         </Popover>
       }
     >
-      <button type="button" onClick={() => setShowOverlay(!showOverlay)}>
+      <button
+        type="button"
+        onClick={() => setShowOverlay(!showOverlay)}
+        className={clsx(
+          "filter",
+          (showOverlay || selectedValuesCount > 0) && "active"
+        )}
+      >
         <span className="me-1">{title}</span>
         {selectedValuesCount > 0 && <span>({selectedValuesCount})</span>}
       </button>
