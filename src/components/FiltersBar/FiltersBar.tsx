@@ -17,21 +17,25 @@ function FiltersBar({
   const [selectedFilters, setSelectedFilters] = useState<Filters>(
     selectedValues || {}
   );
+  const onSelectFilter = (filters: Filters) => {
+    setSelectedFilters(filters);
+    onSelectValue?.(filters);
+  };
 
   useEffect(() => {
-    onSelectValue?.(selectedFilters);
-  }, [selectedFilters, onSelectValue]);
+    setSelectedFilters(selectedValues);
+  }, [selectedValues]);
 
   const onFilterFormApply = ({ title, checkedOptions }: FormOptions) => {
     if (checkedOptions.length > 0) {
-      setSelectedFilters({
+      onSelectFilter({
         ...selectedFilters,
         [title]: checkedOptions,
       });
     } else {
       const filters = { ...selectedFilters };
       delete filters[title];
-      setSelectedFilters(filters);
+      onSelectFilter(filters);
     }
   };
 
