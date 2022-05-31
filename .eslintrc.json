@@ -24,6 +24,7 @@
   ],
   "rules": {
     "react/jsx-props-no-spreading": "off",
-    "no-restricted-exports": ["error", { "restrictedNamedExports": [] }]
+    "no-restricted-exports": ["error", { "restrictedNamedExports": [] }],
+    "react/require-default-props": "off"
   }
 }
