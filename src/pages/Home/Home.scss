@@ -1,0 +1,15 @@
+@import '/src/styles/colors';
+
+.filters-bar {
+    display: flex;
+    background-color: mintcream;
+      padding: 12px 16px
+  }
+
+div.applied-filters{
+    margin: 2rem 3rem;
+    padding: 2rem 1rem;
+    background-color: $dark-green;
+    color: $white;
+    border-radius:16px;
+}

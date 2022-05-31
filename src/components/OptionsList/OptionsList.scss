@@ -1,0 +1,38 @@
+@import '/src/styles/colors';
+
+
+div.applied-filter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 12px 0px;
+}
+
+
+span.filter-name{
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-right: 6px;
+}
+
+span.option-name{
+    color: $black;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    margin: 2px 4px;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.option-name button{
+    border: none;
+    background: none;
+}
+span.option-name button svg{
+   width: 20px;
+   fill: red;
+}
