@@ -69,7 +69,7 @@ We can show this data or we can send it in request to get filtered data from a s
 
 Every component has a spec test file.
 
-Filters data exists in mock-store.ts file.
+Filters data exists in mockStore.ts file.
 
 Data types exists in data-model folder.
 

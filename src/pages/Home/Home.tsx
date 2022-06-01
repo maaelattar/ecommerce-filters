@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import filtersData from "../../mock-store";
+import filtersData from "../../mockStore";
 import FiltersBar from "../../components/FiltersBar";
 import { Filters } from "../../data-model";
 import "./Home.scss";
