@@ -25,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.ts src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
@@ -57,5 +58,11 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.6.2"
-  }
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+}
 }
