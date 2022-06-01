@@ -6,9 +6,9 @@ import "./FilterOptionsForm.scss";
 type Props = {
   title: string;
   options: Option[];
-  onApply: Function;
   selectedValues: Option[];
-  afterApply?: () => void;
+  onApply: Function;
+  afterApply?: Function;
 };
 
 function FilterOptionsForm({
