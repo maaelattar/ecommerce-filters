@@ -52,9 +52,12 @@ function CustomAccordionHeader({
           clipRule="evenodd"
         >
           {isCurrentEventKey ? (
-            <path d="M0 12v1h23v-1h-23z" />
+            <path d="M0 12v1h23v-1h-23z" data-testid="minus-icon" />
           ) : (
-            <path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z" />
+            <path
+              d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z"
+              data-testid="plus-icon"
+            />
           )}
         </svg>
       </span>

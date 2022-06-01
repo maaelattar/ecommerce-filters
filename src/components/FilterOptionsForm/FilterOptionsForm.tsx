@@ -27,6 +27,7 @@ function FilterOptionsForm({
           <div key={option.id} className="option">
             <input
               id={option.id}
+              data-testid={option.id}
               defaultChecked={
                 !!checkedOptions.find((val) => val.id === option.id)
               }

@@ -23,13 +23,14 @@ function FilterWrapper({ title, content, selectedValuesCount = 0 }: Props) {
       rootClose
       placement="bottom"
       overlay={
-        <Popover id="filters-popover">
+        <Popover id="filters-popover" data-testid="filters-popover">
           <Popover.Body>{Component}</Popover.Body>
         </Popover>
       }
     >
       <button
         type="button"
+        data-testid="filter-title-button"
         onClick={() => setShowOverlay(!showOverlay)}
         className={clsx(
           "filter",
