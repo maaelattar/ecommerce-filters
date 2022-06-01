@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+# Ecommerce Filters
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+Smart reusable filters picker
 
-In the project directory, you can run:
+## Live Application URL
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**https://eccommerce-filters.netlify.app/**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+HTML
 
-### `yarn build`
+CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+JavaScript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+TypeScript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React
 
-### `yarn eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Renders given filters data and its options
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Select any number of options user wants
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Cancel all selected filter options or only few options
 
-## Learn More
+Responsive and supports mobile view
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Steps
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+Clone the project into local.
+
+Install all the NPM packages.
+
+Go into the project folder and type the following command to install all NPM packages
+
+`yarn`
+
+In order to run the application Type the following command
+
+`yarn start`
+
+The Application Runs on localhost:3000
+
+In order to test the application Type the following command
+
+`yarn test`
+
+## Application Design
+
+---
+
+### Info
+
+Application has two main components Home page and FiltersBar component, FiltersBar is responsible for rendering filters and handling user interactions with filters and return data to Home page so that we can deal with returned data as we want.
+We can show this data or we can send it in request to get filtered data from a server.
+
+Every component has a spec test file.
+
+Filters data exists in mock-store.ts file.
+
+Data types exists in data-model folder.
+
+### Pages
+
+**Home**: Renders filters menu component and selected filters
+
+### Components
+
+**FiltersBar**: Receives filters data, selected-values and action to perform on selecting filter options, it's the main component responsible for rendering filters on large-screen and mobile.
+
+**FilterWrapper**: Receives filter title, dynamic content and selectedFilterOptionsCount, its main job is to show a popover with content when user clicks on filter button.
+
+**FilterOptionsForm**: Receives filter title, options, selectedOptionsValue, onApply method and afterApply method, content , its main job is to render options form and enable user to select any option, it has also two buttons apply and cancel button.
+when user clicks apply, selected options are applied and when user clicks cancel selected options are cancelled.
+
+**FiltersAccordion**: Responsible for wrapping FilterOptionsForm in accordion items.
+
+**FiltersAccordionItem**: Wraps FilterOptionsForm.
+
+**OptionsList**: Renders selected filter options with clear all button
+
+## Resources
+
+---
+
+**create-react-app** : The following link has all the commands that can be used with create-react-app https://github.com/facebook/create-react-app
+
+**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
+
+**React Bootstrap** : Refer to https://react-bootstrap.github.io/getting-started/introduction/ to understand how to use React Bootstrap
